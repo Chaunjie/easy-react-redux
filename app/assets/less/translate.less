@@ -1,0 +1,411 @@
+.transition-group {
+  z-index: 20;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards
+}
+
+.transition-group-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 0;
+  flex: 1 0 0
+}
+
+.transition-group-container > .transition-group-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-box-flex: 0;
+  -ms-flex: none;
+  flex: none
+}
+
+.transition-group {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  height: 100%
+}
+
+.transition-group-instant-leave {
+  z-index: 10
+}
+
+.transition-group-show-from-bottom-leave, .transition-group-show-from-left-leave, .transition-group-show-from-right-leave, .transition-group-show-from-top-leave {
+  z-index: 10;
+  pointer-events: none
+}
+
+.transition-group-show-from-bottom-enter, .transition-group-show-from-left-enter, .transition-group-show-from-right-enter, .transition-group-show-from-top-enter {
+  z-index: 20;
+  visibility: hidden;
+  pointer-events: none
+}
+
+.transition-group-show-from-bottom-enter-active, .transition-group-show-from-left-enter-active, .transition-group-show-from-right-enter-active, .transition-group-show-from-top-enter-active {
+  visibility: visible
+}
+
+.transition-group-show-from-top-enter-active {
+  -webkit-animation-name: viewShowFromTopEnter;
+  animation-name: viewShowFromTopEnter
+}
+
+.transition-group-show-from-right-enter-active {
+  -webkit-animation-name: viewShowFromRightEnter;
+  animation-name: viewShowFromRightEnter
+}
+
+.transition-group-show-from-bottom-enter-active {
+  -webkit-animation-name: viewShowFromBottomEnter;
+  animation-name: viewShowFromBottomEnter
+}
+
+.transition-group-show-from-left-enter-active {
+  -webkit-animation-name: viewShowFromLeftEnter;
+  animation-name: viewShowFromLeftEnter
+}
+
+.transition-group-show-from-left-leave {
+  -webkit-animation-name: viewShowFromLeftLeave;
+  animation-name: viewShowFromLeftLeave
+}
+
+.transition-group-show-from-right-leave {
+  -webkit-animation-name: viewShowFromRightLeave;
+  animation-name: viewShowFromRightLeave
+}
+
+.transition-group-show-from-bottom-enter-active, .transition-group-show-from-left-enter-active, .transition-group-show-from-left-leave, .transition-group-show-from-right-enter-active, .transition-group-show-from-right-leave, .transition-group-show-from-top-enter-active {
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+  -webkit-animation-timing-function: cubic-bezier(.36, .66, .04, 1);
+  animation-timing-function: cubic-bezier(.36, .66, .04, 1)
+}
+
+.transition-group-reveal-from-bottom-leave, .transition-group-reveal-from-left-leave, .transition-group-reveal-from-right-leave, .transition-group-reveal-from-top-leave {
+  z-index: 20;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none
+}
+
+.transition-group-reveal-from-bottom-enter, .transition-group-reveal-from-left-enter, .transition-group-reveal-from-right-enter, .transition-group-reveal-from-top-enter {
+  z-index: 10;
+  visibility: hidden;
+  pointer-events: none
+}
+
+.transition-group-reveal-from-bottom-enter-active, .transition-group-reveal-from-left-enter-active, .transition-group-reveal-from-right-enter-active, .transition-group-reveal-from-top-enter-active {
+  visibility: visible
+}
+
+.transition-group-reveal-from-top-leave {
+  -webkit-animation-name: viewRevealFromTopLeave;
+  animation-name: viewRevealFromTopLeave
+}
+
+.transition-group-reveal-from-right-leave {
+  -webkit-animation-name: viewRevealFromRightLeave;
+  animation-name: viewRevealFromRightLeave
+}
+
+.transition-group-reveal-from-bottom-leave {
+  -webkit-animation-name: viewRevealFromBottomLeave;
+  animation-name: viewRevealFromBottomLeave
+}
+
+.transition-group-reveal-from-left-leave {
+  -webkit-animation-name: viewRevealFromLeftLeave;
+  animation-name: viewRevealFromLeftLeave
+}
+
+.transition-group-reveal-from-left-enter-active {
+  -webkit-animation-name: viewRevealFromLeftEnter;
+  animation-name: viewRevealFromLeftEnter
+}
+
+.transition-group-reveal-from-right-enter-active {
+  -webkit-animation-name: viewRevealFromRightEnter;
+  animation-name: viewRevealFromRightEnter
+}
+
+.transition-group-reveal-from-bottom-leave, .transition-group-reveal-from-left-enter-active, .transition-group-reveal-from-left-leave, .transition-group-reveal-from-right-enter-active, .transition-group-reveal-from-right-leave, .transition-group-reveal-from-top-leave {
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+  -webkit-animation-timing-function: cubic-bezier(.36, .66, .04, 1);
+  animation-timing-function: cubic-bezier(.36, .66, .04, 1)
+}
+
+@-webkit-keyframes viewShowFromLeftEnter {
+  0% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0)
+  }
+  to {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+  }
+}
+
+@keyframes viewShowFromLeftEnter {
+  0% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0)
+  }
+  to {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+  }
+}
+
+@-webkit-keyframes viewShowFromLeftLeave {
+  to {
+    -webkit-transform: translate3d(25%, 0, 0);
+    transform: translate3d(25%, 0, 0);
+    opacity: .75
+  }
+}
+
+@keyframes viewShowFromLeftLeave {
+  to {
+    -webkit-transform: translate3d(25%, 0, 0);
+    transform: translate3d(25%, 0, 0);
+    opacity: .75
+  }
+}
+
+@-webkit-keyframes viewShowFromRightEnter {
+  0% {
+    -webkit-transform: translate3d(99%, 0, 0);
+    transform: translate3d(99%, 0, 0)
+  }
+  to {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+  }
+}
+
+@keyframes viewShowFromRightEnter {
+  0% {
+    -webkit-transform: translate3d(99%, 0, 0);
+    transform: translate3d(99%, 0, 0)
+  }
+  to {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+  }
+}
+
+@-webkit-keyframes viewShowFromRightLeave {
+  to {
+    -webkit-transform: translate3d(-25%, 0, 0);
+    transform: translate3d(-25%, 0, 0);
+    opacity: .75
+  }
+}
+
+@keyframes viewShowFromRightLeave {
+  to {
+    -webkit-transform: translate3d(-25%, 0, 0);
+    transform: translate3d(-25%, 0, 0);
+    opacity: .75
+  }
+}
+
+@-webkit-keyframes viewShowFromTopEnter {
+  0% {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0)
+  }
+  to {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+  }
+}
+
+@keyframes viewShowFromTopEnter {
+  0% {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0)
+  }
+  to {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+  }
+}
+
+@-webkit-keyframes viewShowFromBottomEnter {
+  0% {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0)
+  }
+  to {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+  }
+}
+
+@keyframes viewShowFromBottomEnter {
+  0% {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0)
+  }
+  to {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+  }
+}
+
+@-webkit-keyframes viewRevealFromLeftLeave {
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+  }
+  to {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0)
+  }
+}
+
+@keyframes viewRevealFromLeftLeave {
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+  }
+  to {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0)
+  }
+}
+
+@-webkit-keyframes viewRevealFromLeftEnter {
+  0% {
+    -webkit-transform: translate3d(25%, 0, 0);
+    transform: translate3d(25%, 0, 0);
+    opacity: .75
+  }
+  to {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1
+  }
+}
+
+@keyframes viewRevealFromLeftEnter {
+  0% {
+    -webkit-transform: translate3d(25%, 0, 0);
+    transform: translate3d(25%, 0, 0);
+    opacity: .75
+  }
+  to {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1
+  }
+}
+
+@-webkit-keyframes viewRevealFromRightLeave {
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+  }
+  to {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0)
+  }
+}
+
+@keyframes viewRevealFromRightLeave {
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+  }
+  to {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0)
+  }
+}
+
+@-webkit-keyframes viewRevealFromRightEnter {
+  0% {
+    -webkit-transform: translate3d(-25%, 0, 0);
+    transform: translate3d(-25%, 0, 0);
+    opacity: .75
+  }
+  to {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1
+  }
+}
+
+@keyframes viewRevealFromRightEnter {
+  0% {
+    -webkit-transform: translate3d(-25%, 0, 0);
+    transform: translate3d(-25%, 0, 0);
+    opacity: .75
+  }
+  to {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1
+  }
+}
+
+@-webkit-keyframes viewRevealFromTopLeave {
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+  }
+  to {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0)
+  }
+}
+
+@keyframes viewRevealFromTopLeave {
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+  }
+  to {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0)
+  }
+}
+
+@-webkit-keyframes viewRevealFromBottomLeave {
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+  }
+  to {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0)
+  }
+}
+
+@keyframes viewRevealFromBottomLeave {
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+  }
+  to {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0)
+  }
+}
