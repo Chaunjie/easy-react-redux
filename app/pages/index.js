@@ -41,7 +41,7 @@ class Index extends React.Component {
     }
 
     translateTo() {
-        this.context.router.push('footer');
+        this.context.router.push('/about/2');
     }
 
     loadMoreFromAction(){

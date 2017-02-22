@@ -25,17 +25,6 @@ class About extends React.Component {
         const { increment, incrementIfOdd, incrementAsync, decrement, counter } = this.props;
         return (
             <div className="container">
-                {/*Clicked: {counter} times
-                {' '}
-                <button onTouchTap={increment}>+</button>
-                {' '}
-                <button onTouchTap={decrement}>-</button>
-                {' '}
-                <button onTouchTap={incrementIfOdd}>Increment if odd</button>
-                {' '}
-                <button onTouchTap={() => incrementAsync()}>Increment async</button>
-                <button onTouchTap={this.translateTo.bind(this)}>跳转</button>*/}
-
                 <ReactSwiper ref="reactSwiper" className="single-swiper" swipeOptions={{pagination : '.swiper-pagination',autoplay : 5000, loop : false, lazyLoading : true, onSlideChangeStart: this.onSlideChangeStart}}>
                     <div className="page">
                         <a href="#1">
@@ -56,6 +45,17 @@ class About extends React.Component {
                         </a>
                     </div>
                 </ReactSwiper>
+                测试redux
+                Clicked: {counter} times
+                {' '}
+                <button onTouchTap={increment}>+</button>
+                {' '}
+                <button onTouchTap={decrement}>-</button>
+                {' '}
+                <button onTouchTap={incrementIfOdd}>Increment if odd</button>
+                {' '}
+                <button onTouchTap={() => incrementAsync()}>Increment async</button>
+                <button onTouchTap={this.translateTo.bind(this)}>跳转</button>
             </div>
 
         )

@@ -4,7 +4,7 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import { Router, browserHistory, hashHistory, applyRouterMiddleware } from 'react-router';
-import { Provider} from 'react-redux'
+import { Provider } from 'react-redux'
 import configureStore from './stores/configureStore';
 import routers from './pages/router';
 import injectTapEventPlugin from "react-tap-event-plugin";

@@ -17,6 +17,7 @@ export function refresh(callback){
         ).then(function (res) {
             const arr = ['first blood', 'double kill', 'triple kill', 'quatary kill', ' penta kill ', 'killing spree', 'dominating', 'rampage', 'God Like', 'legendary'];
             const staticState = {page: 1, pageNum: 10, hasMore: arr.length >= 10 ? 1 : 0, list: arr};
+
             dispatch(function(text){
                 return {
                     type: INIT_FILE_DATA,
@@ -40,6 +41,7 @@ export function loadMore(callback){
             const arr = ['first blood1', 'double kill1'];
             const { fileState } = getState();
             const staticState = {page: 2, pageNum: 10, hasMore: arr.length >= 10 ? 1 : 0, list: fileState.list.concat(arr)};
+
             dispatch(function(text){
                 return {
                     type: INIT_FILE_DATA,

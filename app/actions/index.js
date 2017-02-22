@@ -16,6 +16,7 @@ export function refresh(){
         ).then(function (res) {
             const arr = ['first blood', 'double kill', 'triple kill', 'quatary kill', ' penta kill ', 'killing spree', 'dominating', 'rampage', 'God Like', 'legendary'];
             const staticState = {page: 1, pageNum: 10, hasMore: true, list: arr};
+
             dispatch(function(text){
                 return {
                     type: INIT_DATA,
@@ -37,6 +38,7 @@ export function loadMore(callback){
             const arr = ['first blood', 'double kill'];
             const { mainState } = getState();
             const staticState = {page: 2, pageNum: 10, hasMore: arr.length >= 10, list: mainState.list.concat(arr)};
+
             dispatch(function(text){
                 return {
                     type: INIT_DATA,
@@ -58,6 +60,7 @@ export function initData(){
         ).then(function (res) {
             const arr = ['first blood', 'double kill', 'triple kill', 'quatary kill', ' penta kill ', 'killing spree', 'dominating', 'rampage', 'God Like', 'legendary'];
             const staticState = {page: 1, pageNum: 10, hasMore: true, list: arr};
+
             dispatch(function(text){
                 return {
                     type: INIT_DATA,
