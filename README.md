@@ -5,10 +5,10 @@ The following commands are available in your project:
 
 
 	Start for development	
-    npm start
+    npm run dev or npm start
 
 	Just build the dist version and copy static files
-    npm run build
+    npm run build(just for mac ,windows system please read dev.md)
 
 
 ##Environment version

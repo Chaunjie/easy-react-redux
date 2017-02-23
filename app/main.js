@@ -15,7 +15,7 @@ const store = configureStore();
 
 ReactDom.render((
     <Provider store={store}>
-        <Router history={browserHistory}>
+        <Router history={hashHistory}>
             {routers}
         </Router>
     </Provider>

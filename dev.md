@@ -10,3 +10,9 @@ apache服务器只需要在打包目录下面添加.htaccess文件并且把下�
     
 如果是nginx服务器参考如下链接进行配置
     https://github.com/ReactTraining/react-router/blob/v2.0.0-rc5/docs/guides/basics/Histories.md#configuring-your-server
+    
+在package.json里面的script设置环境变量，注意mac与windows的设置方式不一样
+ "scripts": {
+     "publish-mac": "export NODE_ENV=prod&&webpack -p --progress --colors",
+     "publish-win":  "set NODE_ENV=prod&&webpack -p --progress --colors"
+ }
